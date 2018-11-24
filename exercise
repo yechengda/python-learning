@@ -1,0 +1,14 @@
+# 第2章 Python简介 
+# Page 19 
+# 实际练习：编写一个程序，要求用户输入10个整数，然后输出其中最大的奇数。如果用户没有输入奇数，则输出一个消息进行说明。
+max_odd = float("-inf")
+n = 0
+while n < 10:
+    integer = int(input(f"请输入第{n+1}个整数："))
+    if integer % 2 != 0 and integer > max_odd:
+        max_odd = integer
+    n += 1
+if max_odd > float("-inf"):
+    print(f"10个整数中最大的奇数是{max_odd}")
+else:
+    print("10个整数中没有输入奇数")
